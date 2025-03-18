@@ -26,5 +26,5 @@ jobs:
           
           git add .
           git commit -m "🔄 Actualización de WordPress y plugins [Automático]" || echo "No hay cambios para confirmar"
-          
+          git remote set-url origin https://x-access-token:${{ secrets.TOKEN_IV }}@github.com/caivmo/wp-composer-github-actions.git
           git push origin updates || git push --set-upstream origin updates
