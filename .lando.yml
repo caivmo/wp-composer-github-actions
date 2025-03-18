@@ -1,0 +1,4 @@
+name: wp-composer-github-actions
+recipe: wordpress
+config:
+  webroot: web
