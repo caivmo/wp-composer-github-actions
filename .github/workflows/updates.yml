@@ -21,6 +21,10 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
+          
+          git checkout -b updates || git checkout updates  # Cambiar a la rama 'updates' o crearla si no existe
+          
           git add .
           git commit -m "🔄 Actualización de WordPress y plugins [Automático]" || echo "No hay cambios para confirmar"
-          git push origin updates || echo "No hay cambios para enviar"
+          
+          git push origin updates || git push --set-upstream origin updates
